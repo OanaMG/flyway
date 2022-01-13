@@ -61,11 +61,11 @@ public class DB2Parser extends Parser {
                 context.increaseBlockDepth(keyword.getText());
 
             }
-        } else if (
+        } else if (context.getBlockDepth() > 0 &&
             // END decreases block depth, exception when used with ROW END
-                ("END".equals(keyword.getText()) && !"ROW".equals(previousKeyword))
+                (("END".equals(keyword.getText()) && !"ROW".equals(previousKeyword))
                         || doTokensMatchPattern(tokens, keyword, CREATE_IF_NOT_EXISTS)
-                        || doTokensMatchPattern(tokens, keyword, DROP_IF_EXISTS)) {
+                        || doTokensMatchPattern(tokens, keyword, DROP_IF_EXISTS))) {
             context.decreaseBlockDepth();
         }
     }
