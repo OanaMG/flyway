@@ -29,7 +29,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.flywaydb</groupId>
     <artifactId>flyway-parent</artifactId>
-    <version>0-OAG-SNAPSHOT</version>
+    <version>7.15.0-OAG-1.4</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Flyway: Database Migrations Made Easy.</description>
@@ -87,15 +87,15 @@
     </modules>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>${snapshotRepository.id}</id>
-            <name>${snapshotRepository.name}</name>
-            <url>${snapshotRepository.url}</url>
-        </snapshotRepository>
+<!--        <snapshotRepository>-->
+<!--            <id>${snapshotRepository.id}</id>-->
+<!--            <name>${snapshotRepository.name}</name>-->
+<!--            <url>${snapshotRepository.url}</url>-->
+<!--        </snapshotRepository>-->
         <repository>
-            <id>${releaseRepository.id}</id>
-            <name>${releaseRepository.name}</name>
-            <url>${releaseRepository.url}</url>
+            <id>oagaviation-visualstudio.com-schedules-3rd-party</id>
+            <name>Schedules-3rd-party</name>
+            <url>https://oagaviation.pkgs.visualstudio.com/_packaging/Schedules-3rd-party/maven/v1</url>
         </repository>
     </distributionManagement>
 
